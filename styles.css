@@ -6,8 +6,29 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+.container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0px 30px;
+  margin-top: 100px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  font-family: 'Josefin Sans', sans-serif;
+  color: black;
+  letter-spacing: 10px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
 body {
-  background-color: rgba(240, 225, 161, 0.5)
+  background-color: rgba(240, 225, 161, 0.5);
+  font-family: 'Josefin Sans', sans-serif;
+
 }
 nav {
   background-color: rgba(227, 180, 41, 0.5);
@@ -25,12 +46,19 @@ input.sub-btn:hover {
   transition: .1s;
 }
 
-label.logo {
-  line-height: 80px;
-  padding: 0 70px;
-  font-size:25px;
-  font-weight: bold;
+a img.logo {
+  height: 120px;
+  margin: 0 40px;
   cursor: pointer;
+  animation: logo-anim 3s ease-in forwards infinite alternate;
+}
+@keyframes logo-anim {
+  from {
+    transform: rotate(-20deg);
+  }
+  to {
+    transform: rotate(20deg);
+  }
 }
  nav ul {
    float: right;
@@ -39,7 +67,8 @@ label.logo {
 
  nav ul li {
    display: inline-block;
-   line-height: 80px;
+   line-height: 100px;
+   margin: 10px 0;
    padding: 0 20px;
  }
 
@@ -103,7 +132,7 @@ a.active,a:hover {
   nav ul li a{
     color: white;
   }
-  a.active,a:hover {
+.nav:hover {
     background-color: rgb(92, 87, 87);
     color: rgb(227, 180, 41);
   }
@@ -117,4 +146,69 @@ section#main {
   font-size: 25px;
   text-align: center;
   padding: 20px 10px;
+}
+input.sub-btn {
+  margin: 20px 10px;
+}
+.container {
+  margin: 20px auto;
+}
+div.title {
+  margin: auto;
+}
+
+form input.date-picker {
+  color: rgb(61, 61, 61);
+  cursor: pointer;
+}
+
+.new-task {
+  background-color: rgb(227, 180, 41);
+  height: 130px;
+  margin-top: 50px;
+  border-radius: 6px;
+  display: flex;
+}
+.checkbox {
+  background-color: rgba(227, 180, 41, 0.4);
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.checkmark {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid rgba(240, 225, 161, 0.5);
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.checkmark:hover {
+  border-color: linear-gradient(135deg, #d89a14 0%, #C058F3 100%);
+  background: linear-gradient(135deg, #ff8801 0%, #fbff00 100%);
+}
+
+.new-task-input {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.new-task-input form {
+  flex-grow: 1;
+}
+
+.new-task-input input {
+  width: 100%;
+  padding: 10px 0px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+
+.new-task-input input::placeholder {
+  color:gray;
 }

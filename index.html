@@ -12,17 +12,37 @@
       <label class='checkmo'for="check">
         <i class="fa fa-bars"></i>
       </label>
-      <label class="logo">Do Work</label>
+      <a href="index.html"><img class="logo" src="images/temp-logo.png" alt="logo"></a>
       <ul>
-        <li><a class='active'href="#">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="us.html">Us</a></li>
+        <li><a class='active nav'href="#">Home</a></li>
+        <li><a class="nav" href="about.html">About</a></li>
+        <li><a class="nav" href="us.html">Us</a></li>
       </ul>
     </nav>
+
     <section id="main">
-      <h3>To Do List</h3>
+      <div class="container">
+        <div class="header">
+          <div class="title">
+              To Do List
+              </div>
+        </div>
+      <div class="new-task">
+        <div class="checkbox">
+          <div class="checkmark">
+          </div>
+        </div>
+        <div class="new-task-input">
+          <form onsubmit="">
+            <input type="text" placeholder="Create new task..."/>
+            <input type="text" name="" value="" placeholder="Task Description">
+            <input class="date-picker" type="date" name="" value="1999-12-31" min="1970-12-31" max="2030-12-31">
+          </form>
+        </div>
+      </div>
       <input class='sub-btn' type="submit" name="Add New Task" value="Add New Task">
-    </section>
+    </div>
+   </section>
 
   </body>
 </html>
