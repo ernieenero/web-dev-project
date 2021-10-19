@@ -50,7 +50,7 @@ input.sub-btn:hover {
 }
 
 .nav:hover {
-  background-color: rgba(227, 180, 41, 0.4);
+  background-color: rgb(227, 190, 41);
   transition: .5s;
 }
 
@@ -137,8 +137,9 @@ nav ul li a {
     color: white;
   }
   .nav:hover {
-    background-color: rgba(227, 180, 41, 0.4);
+    background-color: rgb(227, 190, 41);
     transition: .5s;
+    color: black;
   }
   #check:checked ~ ul{
     top: 125px;
