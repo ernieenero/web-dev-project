@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;700&display=swap');
+/* Navigation bar part */
 * {
   padding: 0;
   margin: 0;
@@ -35,18 +36,19 @@ nav {
   overflow: hidden;
   position: fixed;
   top: 0;
-  width: 100%
+  width: 100%;
+  z-index: 1;
 }
 input.sub-btn {
   padding: 10px 5px;
   border: 2px solid gray;
   border-radius: 10px;
-  background-color: rgba(227, 180, 41, 0.6);
+  background-color: rgb(227, 180, 41);
   cursor: pointer;
 }
 input.sub-btn:hover {
   padding: 12px 6px;
-  transition: .1s;
+  transition: 0.8s;
 }
 
 .nav:hover {
@@ -142,20 +144,20 @@ nav ul li a {
     color: black;
   }
   #check:checked ~ ul{
-    top: 125px;
+    top: 124px;
     right: -80%;
   }
 }
 section#main {
-  height: 100vh;
   font-size: 25px;
   text-align: center;
   padding: 20px 10px;
   margin-top: 140px;
+  animation: TransIn 0.5s
 }
 input.sub-btn {
   margin: 20px 10px;
-  animation: btn-anim .5s ease-in forwards infinite alternate;
+  animation: btn-anim 1s ease-in forwards infinite alternate;
 }
 @keyframes btn-anim {
   100% {
@@ -173,9 +175,63 @@ form input.date-picker {
   color: rgb(61, 61, 61);
   cursor: pointer;
 }
+@keyframes TransIn {
+    from {
+      opacity: 0;
+      transform: rotateX(-10deg);
+    }
+    to {
+      opacity: 1;
+      transform: rotateX(0);
+    }
+}
+/* Navigation Bar Part */
 
-/* ==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==//==// */
+/* US.html PART */
+div.Deck {
+  position: relative;
+  top: 20vh;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 2%;
+  animation: TransIn 0.5s;
+}
 
+div.card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(207, 192, 153, 0.7);
+  margin: 30px auto;
+  width: 30vw;
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 2px 4px rgba(115, 114, 114, 0.3);
+  text-align: left;
+  cursor: pointer;
+}
+div.card img {
+  text-align: center;
+}
+div.card > *{
+  margin: 10px;
+}
+
+div.card:hover {
+  box-shadow: 6px 10px rgba(115, 114, 114, 0.3);
+  transition: 1s;
+}
+@media (max-width:1200px) {
+  div.Deck {
+    padding: 10px 2%;
+    margin: 50px 10%;
+  }
+}
+/* Us.html Part */
+
+
+/* Adding New Task Part */
 .new-task {
   background-color: rgb(227, 180, 41);
   height: 130px;
@@ -226,3 +282,4 @@ form input.date-picker {
 .new-task-input input::placeholder {
   color:gray;
 }
+/* Adding New Task Part */
