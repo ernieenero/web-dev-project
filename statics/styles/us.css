@@ -1,0 +1,42 @@
+/* US.html PART */
+div.Deck {
+  position: relative;
+  top: 20vh;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 2%;
+  animation: TransIn 0.5s;
+}
+
+div.card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(207, 192, 153, 0.7);
+  margin: 30px auto;
+  width: 30vw;
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 2px 4px rgba(115, 114, 114, 0.3);
+  text-align: left;
+  cursor: pointer;
+}
+div.card img {
+  text-align: center;
+}
+div.card > * {
+  margin: 10px;
+}
+
+div.card:hover {
+  box-shadow: 6px 10px rgba(115, 114, 114, 0.3);
+  transition: 1s;
+}
+@media (max-width: 1200px) {
+  div.Deck {
+    padding: 10px 2%;
+    margin: 50px 10%;
+  }
+}
+/* Us.html Part */
