@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../statics/styles/styles.css">
+    <link rel="stylesheet" href="../statics/styles/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>To Do List</title>
   </head>
@@ -23,27 +24,20 @@
     </nav>
 
     <section id="main">
-      <div class="container">
-        <div class="header">
-          <div class="title">
-              To Do List
-              </div>
+        <div class="form-page">
+            <form action="login.html" method="post">
+                <label for="name">Name </label>
+                <input type="text" name="name" placeholder="Enter Name">
+                <label for="username">Username </label>
+                <input type="text" name="username" placeholder="Enter Username">
+                <label for="password">Password </label>
+                <input type="text" name="password" placeholder="Enter Password">
+                <label for="birthdate">Birthdate </label>
+                <input type="date" name="birthdate" placeholder="Enter Username">
+                
+                <input class="login-btn" type="submit" name='submit' value="Signup">
+            </form>
         </div>
-      <div class="new-task">
-        <div class="checkbox">
-          <div class="checkmark">
-          </div>
-        </div>
-        <div class="new-task-input">
-          <form onsubmit="">
-            <input type="text" placeholder="Create new task..."/>
-            <input type="text" name="" value="" placeholder="Task Description">
-            <input class="date-picker" type="date" name="" value="1999-12-31" min="1970-12-31" max="2030-12-31">
-          </form>
-        </div>
-      </div>
-      <input class='sub-btn' type="submit" name="Add New Task" value="Add New Task">
-    </div>
    </section>
 
   </body>
