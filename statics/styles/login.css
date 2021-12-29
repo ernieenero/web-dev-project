@@ -32,6 +32,8 @@ input[name="username"],
 input[name="password"] {
   border: none;
   border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-radius: 10px;
 }
 
 input[name="submit"] {
@@ -41,6 +43,14 @@ input[name="submit"] {
   color: white;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+}
+
+input[name="name"],
+input[name="birthdate"] {
+  border: none;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-radius: 10px;
 }
 
 input[name="submit"]:hover {
