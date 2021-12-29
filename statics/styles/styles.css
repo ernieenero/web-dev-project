@@ -50,7 +50,7 @@ input.sub-btn:hover {
   transition: 0.8s;
 }
 
-.effect {
+.nav:hover {
   background-color: rgb(227, 190, 41);
   transition: 0.3s;
   color: white;
