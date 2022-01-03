@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../statics/styles/styles.css">
+    <link rel="stylesheet" href="../statics/styles/calendar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>To Do List</title>
   </head>
@@ -29,23 +30,51 @@
               To Do List
               </div>
         </div>
-      <div class="new-task">
-        <div class="checkbox">
-          <div class="checkmark">
+        <div class="new-task">
+          <div class="checkbox">
+            <div class="checkmark">
+            </div>
+          </div>
+          <div class="new-task-input">
+            <form onsubmit="" method="post">
+              <input type="text" placeholder="Create new task..."/>
+              <input type="text" name="" value="" placeholder="Task Description">
+              <input class="date-picker" type="date" name="" value="1999-12-31" min="1970-12-31" max="2030-12-31">
+            </form>
           </div>
         </div>
-        <div class="new-task-input">
-          <form onsubmit="">
-            <input type="text" placeholder="Create new task..."/>
-            <input type="text" name="" value="" placeholder="Task Description">
-            <input class="date-picker" type="date" name="" value="1999-12-31" min="1970-12-31" max="2030-12-31">
-          </form>
-        </div>
+        <input class='sub-btn' type="submit" name="Add New Task" value="Add New Task">
       </div>
-      <input class='sub-btn' type="submit" name="Add New Task" value="Add New Task">
+      <div class="calendar fade">
+        <div class="month-header">
+            <a class="prev">&#10094;</a>
+
+            <div class="current-date">
+                <h1 class="currMonth">May</h1>
+                <h3 class="weekDate">Fri. May 01, 2020</h3>
+            </div>
+            
+            <a class="next">&#10095;</a>
+        </div>
+        <div class="days">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+        </div>
+        <div class="num-date">
+            
+        </div>
+    </div>
+
+    <div class="pending-task">
+      
     </div>
    </section>
 
   </body>
-  <script src="../statics/js/index.js"></script>
+  <script src="../statics/js/calendar.js"></script>
 </html>
