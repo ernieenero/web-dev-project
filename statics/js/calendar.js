@@ -38,20 +38,17 @@ startCalendar(currMonth, currDate, currYear);
 rightButton.addEventListener('click', clickRight);
 function clickRight(){
     if(currMonth < 12){
-        
-        const date = new Date(currYear, currMonth+1, currDate);
-        currMonth = date.getMonth();
-        currDate = date.getDate();
-        currYear = date.getFullYear();
-        weekDate = date.getDay();
-        console.log(currMonth);
-        startCalendar(currMonth, currDate, currYear);
+        currMonth+=1;
+        dateHelper(currYear, currMonth, currDate);
+    }else {
+        currMonth = 0;
+        currYear+=1;
+        dateHelper(currYear, currMonth, currDate);
     }
 }   
 
 leftButton.addEventListener('click', clickLeft);
 function clickLeft(){
-    console.log(currMonth);
     if(currMonth > 0){
         currMonth -= 1;
         dateHelper(currYear, currMonth, currDate);
@@ -73,12 +70,15 @@ function dateHelper(currYear, currMonth, currDate){
 }
 
 function startCalendar(currMonth=null, currDate=null, currYear=null){
-    var weekDate = new Date(currYear, currMonth, 1).getDay();
+    var weekDate = new Date(currYear, currMonth, currDate).getDay();
+    var startDate = new Date(currYear, currMonth, 1).getDay();
     var numOfDays = new Date(currYear, currMonth+1, 0).getDate();
     var prevNumOfDays = new Date(currYear, currMonth, 0).getDate();
     var calendarCol = 35;
     var fullDate = "";
     var numDays = '';
+
+    console.log(weekDate, startDate);
 
     if(currDate < 10){
         finalDate = "0" + currDate;
@@ -92,7 +92,7 @@ function startCalendar(currMonth=null, currDate=null, currYear=null){
     
     prevNumOfDays =  prevNumOfDays - weekDate + 1;
   
-    for(let y= 0; y < weekDate; y++){
+    for(let y= 0; y < startDate; y++){
         numDays += "<div class='prev-dates'>" + prevNumOfDays + "</div>";
         prevNumOfDays++;
     }

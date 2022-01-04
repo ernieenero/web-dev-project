@@ -55,7 +55,7 @@ div.num-date {
 
 div.num-date div {
   display: flex;
-  width: calc(12.2rem / 7);
+  width: calc(14rem / 7);
   height: 2rem;
   padding: 0.5rem;
   cursor: pointer;

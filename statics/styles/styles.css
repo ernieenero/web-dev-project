@@ -245,4 +245,55 @@ form input.date-picker {
 .new-task-input input::placeholder {
   color: gray;
 }
+
+.right-col {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.pending-task {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 10px;
+  background-color: rgb(227, 180, 41);
+  font-size: x-large;
+  font-weight: lighter;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.pending-list {
+  background-color: rgba(227, 180, 100, 1);
+  width: 100%;
+  border-radius: 10px;
+}
+.pending-item {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+
+  padding: 10px 15px;
+}
+.pending-item .item {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 10px;
+}
+.request-option {
+  display: flex;
+  align-items: center;
+  margin: 2px 4px;
+}
+
+.request-option .option {
+  height: 3rem;
+  width: 3rem;
+  margin: 5px;
+}
+.request-option .option:hover {
+  background-color: rgb(227, 180, 41);
+}
+
 /* Adding New Task Part */

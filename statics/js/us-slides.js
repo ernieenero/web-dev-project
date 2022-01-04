@@ -15,7 +15,7 @@ leftSlide.addEventListener('click', slideLeft);
 setInterval(autoSlides, 5000);
 
 function autoSlides(){
-    if(start > 5 ){ start = 0}
+    if(start > 6 ){ start = 0}
 
     slidesReset();
     updateCircle(start);
@@ -41,7 +41,7 @@ function slidesReset(){
 
 
 function slideRight(){
-    if(start < 5 ){
+    if(start < 7 ){
         start++;
     }else{
         start = 0;
@@ -55,7 +55,7 @@ function slideLeft(){
     if(start > 0 ){
         start--;
     }else{
-        start = 5;
+        start = 6;
     }
     showSlides();
     updateCircle(start);
